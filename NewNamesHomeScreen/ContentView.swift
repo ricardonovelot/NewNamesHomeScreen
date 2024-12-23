@@ -71,7 +71,9 @@ var columns = [
 ]
 
 struct ContentView: View {
+    @Environment(\.modelContext) private var modelContext
     
+    @Query private var Scontacts: [Contact]
     @State private var text = ""
     @State private var position = ScrollPosition()
     @State private var isBeyondZero: Bool = false
